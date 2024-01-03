@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class GroceryComponent {
 
+  task!: string;
+  tasks = [] as any [];
+
+  onClick(){
+    this.tasks.push({name: this.task});
+  this.task = '';
+}
 }
